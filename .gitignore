@@ -1,0 +1,40 @@
+# Create .gitignore
+gitignore
+# Environment & Secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Dagster
+.dagster/
+storage/
+logs/
+
+# DuckDB (if testing locally)
+data/
+*.duckdb
+*.duckdb.wal
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+.tmp_*

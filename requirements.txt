@@ -1,0 +1,14 @@
+# ── Dagster Core ──
+dagster>=1.7.0
+dagster-webserver>=1.7.0
+dagster-cloud>=1.7.0
+
+# ── DLT + Destinations ──
+dlt[duckdb]>=1.0.0
+dlt[snowflake]>=1.0.0
+
+# ── Shared Dependencies ──
+pendulum>=3.0.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+pyyaml>=6.0
