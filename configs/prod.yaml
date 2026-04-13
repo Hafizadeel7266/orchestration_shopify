@@ -1,0 +1,4 @@
+# Production configuration (Snowflake)
+destination: snowflake
+dataset_name: shopify_data
+pipeline_name: shopify_dlt

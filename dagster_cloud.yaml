@@ -1,0 +1,8 @@
+locations:
+- location_name: orchestration_shopify
+  code_source:
+    python_module:
+      module_name: orchestration_shopify.definitions
+      attribute: defs
+  build:
+    directory: .

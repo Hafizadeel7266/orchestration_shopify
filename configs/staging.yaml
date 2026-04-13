@@ -1,0 +1,4 @@
+# Staging configuration (Snowflake staging schema)
+destination: snowflake
+dataset_name: shopify_data_staging
+pipeline_name: shopify_dlt_staging

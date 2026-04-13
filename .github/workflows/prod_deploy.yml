@@ -1,0 +1,34 @@
+name: Dagster Production Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  dagster-prod-deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Dagster Cloud (Production)
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -e .
+          pip install dagster dagster-cloud
+
+      - name: Deploy to Dagster Cloud (Production)
+        uses: dagster-io/dagster-cloud-action/actions/serverless_prod_deploy@v0.1
+        with:
+          dagster-cloud-api-token: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
+          location: orchestration_shopify
+        env:
+          DAGSTER_CLOUD_URL: ${{ secrets.DAGSTER_CLOUD_URL }}

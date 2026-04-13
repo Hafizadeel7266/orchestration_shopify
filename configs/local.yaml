@@ -1,0 +1,5 @@
+# Local development configuration (DuckDB)
+destination: duckdb
+duckdb_path: data/duckdb/shopify.duckdb
+dataset_name: shopify_data
+pipeline_name: shopify_dlt

@@ -1,0 +1,5 @@
+# Local dev only — Dagster Cloud uses dagster_cloud.yaml instead
+load_from:
+- python_module:
+    module_name: orchestration_shopify.definitions
+    attribute: defs
