@@ -1,0 +1,1 @@
+"""Shopify script entrypoints."""
