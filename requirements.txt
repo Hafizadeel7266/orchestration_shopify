@@ -2,6 +2,7 @@
 dagster>=1.7.0
 dagster-webserver>=1.7.0
 dagster-cloud>=1.7.0
+dagster-dlt>=0.1.0
 
 # ── DLT + Destinations ──
 dlt[duckdb]>=1.0.0

@@ -1,8 +1,15 @@
 """Shared constants for Shopify orchestration."""
 
-# ── Asset Group Names ──
+# ── Asset Group Names (sub-groups) ──
 SHOPIFY_GROUP = "shopify"
-SHOPIFY_BACKFILL_GROUP = "shopify_backfill"
+ORDERS_GROUP = "orders"
+CUSTOMERS_GROUP = "customers"
+PRODUCTS_GROUP = "products"
+COLLECTIONS_GROUP = "collections"
+SHOP_GROUP = "shop"
+
+# ── Owner ──
+ASSET_OWNER = "team:data-engineering"
 
 # ── Resource Keys ──
 SHOPIFY_RESOURCE_KEY = "shopify_pipeline"
@@ -19,8 +26,8 @@ COLLECTIONS_MAX_LAG_MINUTES = 720     # 12 hours
 SHOP_MAX_LAG_MINUTES = 1440           # 24 hours
 
 # ── Schedule Crons ──
-ORDERS_CRON = "*/30 * * * *"          # Every 30 minutes
-CUSTOMERS_CRON = "0 */6 * * *"        # Every 6 hours
-CATALOG_CRON = "0 */12 * * *"         # Every 12 hours
-SHOP_CRON = "0 3 * * *"              # Daily at 3 AM UTC
-FULL_SYNC_CRON = "0 2 * * 0"         # Sunday 2 AM UTC
+ORDERS_CRON = "*/30 * * * *"
+CUSTOMERS_CRON = "0 */6 * * *"
+CATALOG_CRON = "0 */12 * * *"
+SHOP_CRON = "0 3 * * *"
+FULL_SYNC_CRON = "0 2 * * 0"

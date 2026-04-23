@@ -8,6 +8,7 @@ install_requires=[
     "dagster>=1.7.0",
     "dagster-webserver>=1.7.0",
     "dagster-cloud>=1.7.0",
+    "dagster-dlt>=0.1.0",
     "dlt[duckdb]>=1.0.0",
     "dlt[snowflake]>=1.0.0",
     "pendulum>=3.0.0",
