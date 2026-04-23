@@ -3,6 +3,8 @@
 import dlt
 import logging
 from typing import Iterable, Optional
+import os
+from pathlib import Path
 
 from .config import (
     FETCH_LAST_DAYS,
@@ -57,7 +59,9 @@ def _build_destination(destination: str, destination_path: str = None):
         return dlt.destinations.bigquery()
 
     logger.info("Using DuckDB: %s", destination_path)
-    return dlt.destinations.duckdb(destination_path)
+    duckdb_path = Path(destination_path)
+    duckdb_path.parent.mkdir(parents=True, exist_ok=True)
+    return dlt.destinations.duckdb(str(duckdb_path))
 
 
 def run_pipeline(
